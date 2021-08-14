@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: NanoPi R4S formal edition FusionWRT
+name: Doornet1 formal edition FusionWRT
 
 on:
   repository_dispatch:
