@@ -67,12 +67,10 @@ jobs:
         svn co https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
         rm -rf target/linux/rockchip
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip target/linux/rockchip
-        svn co https://github.com/DHDAXCW/DoorNet_Series/trunk/patches/lean/920-DoorNet1-overclock-to-1.6GHz.patch target/linux/rockchip/patches-5.4/920-DoorNet1-overclock-to-1.6GHz.patch
-        svn co https://github.com/DHDAXCW/DoorNet_Series/trunk/patches/lean/921-DoorNet2-overclock-to-2.2-1.8GHz.patch target/linux/rockchip/patches-5.4/921-DoorNet2-overclock-to-2.2-1.8GHz.patch
+        wget -P target/linux/rockchip/ https://raw.githubusercontent.com/DHDAXCW/DoorNet_Series/main/patches/lean/920-DoorNet1-overclock-to-1.6GHz.patch
+        wget -P target/linux/rockchip/ https://raw.githubusercontent.com/DHDAXCW/DoorNet_Series/main/patches/lean/921-DoorNet2-overclock-to-2.2-1.8GHz.patch
         rm -rf package/boot/uboot-rockchip
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/boot/uboot-rockchip package/boot/uboot-rockchip
-        svn co https://github.com/DHDAXCW/DoorNet_Series/trunk/patches/lean/920-DoorNet1-overclock-to-1.6GHz.patch target/linux/rockchip/patches-5.4
-        svn co https://github.com/DHDAXCW/DoorNet_Series/trunk/patches/lean/921-DoorNet2-overclock-to-2.2-1.8GHz.patch target/linux/rockchip/patches-5.4
     - name: Update Feeds
       id: update
       run: |
