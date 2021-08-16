@@ -5,7 +5,7 @@
 ### 默认编译  
 - 用户名：root 密码：password  管理IP：192.168.2.1
 - 电报群：https://t.me/DHDAXCW
-- 设备购买地址：（淘宝链接）https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-23268010681.55.6c4572d3egOFqD&id=650372680921&rn=958c700309566336a7be7d70235acb75&abbucket=18&sku_properties=5919063:3284564
+- 设备购买地址：(淘宝链接)https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-23268010681.55.6c4572d3egOFqD&id=650372680921&rn=958c700309566336a7be7d70235acb75&abbucket=18&sku_properties=5919063:3284564
 # 赏个鸡腿吧
  ![Alt text](data/2.jpg?raw=true "Title")
 ### 如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
