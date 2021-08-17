@@ -67,8 +67,8 @@ jobs:
         svn co https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
         rm -rf target/linux/rockchip
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip target/linux/rockchip
-        cp -f $GITHUB_WORKSPACE/patches/lean/920-DoorNet1-overclock-to-1.6GHz.patch target/linux/rockchip/patches-5.4
-        cp -f $GITHUB_WORKSPACE/patches/lean/921-DoorNet2-overclock-to-2.2-1.8GHz_patch target/linux/rockchip/patches-5.4
+        # cp -f $GITHUB_WORKSPACE/patches/lean/920-DoorNet1-overclock-to-1.6GHz.patch target/linux/rockchip/patches-5.4
+        # cp -f $GITHUB_WORKSPACE/patches/lean/921-DoorNet2-overclock-to-2.2-1.8GHz_patch target/linux/rockchip/patches-5.4
         rm -rf package/boot/uboot-rockchip
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/boot/uboot-rockchip package/boot/uboot-rockchip
     - name: Update Feeds
