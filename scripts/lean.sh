@@ -34,9 +34,6 @@ git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 # Add luci-app-bypass
 # git clone https://github.com/garypang13/luci-app-bypass.git
 
-# Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
-
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
@@ -69,6 +66,7 @@ git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add extra wireless drivers
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8188eu
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8192du
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
@@ -126,8 +124,10 @@ popd
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y.%m.%d"))/g" zzz-default-settings
+sed -i '/18.06/d' zzz-default-settings
+export orig_version=$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+export date_version=$(date -d "$(rdate -n -4 -p ntp.aliyun.com)" +'%Y-%m-%d')
+sed -i "s/${orig_version}/${orig_version} ${date_version}/g" zzz-default-settings
 popd
 
 # Fix libssh
@@ -176,12 +176,6 @@ sed -i "s/OpenWrt /DHDAXCW $(TZ=UTC-8 date "+%Y%m%d") @ FusionWrt /g" package/le
 # Custom configs
 # git am $GITHUB_WORKSPACE/patches/lean/*.patch
 echo -e " DHDAXCW's FusionWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
-
-# Solve the fan
-pushd package/base-files/files/etc
-rm -rf rc.local
-cp -f $GITHUB_WORKSPACE/scripts/rc.local rc.local
-popd
 
 # Add CUPInfo
 pushd package/lean/autocore/files/arm/sbin
