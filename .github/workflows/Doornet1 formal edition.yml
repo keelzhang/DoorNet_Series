@@ -66,7 +66,7 @@ jobs:
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
         rm -rf target/linux/rockchip/armv8/base-files
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files target/linux/rockchip/armv8/base-files
-        wget https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch target/linux/rockchip/patches-5.4
+        wget -P target/linux/rockchip/patches-5.4/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch
     - name: Cache
       uses: klever1988/cachewrtbuild@main
       with:
