@@ -64,6 +64,8 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
+        rm -rf target/linux/rockchip/armv8/base-files
+        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files target/linux/rockchip/armv8/base-files
     - name: Update Feeds
       id: update
       run: |
