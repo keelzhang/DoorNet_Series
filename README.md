@@ -19,3 +19,22 @@
 
 ### 该项目正在施工🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
 - 将会在国庆节7天里优化所有的固件以及插件改变，移除无用的插件。
+## 鸣谢
+
+特别感谢以下项目：
+
+Openwrt 官方项目：
+
+<https://github.com/openwrt/openwrt>
+
+Lean 大的 Openwrt 项目：
+
+<https://github.com/coolsnowwolf/lede>
+
+immortalwrt 的 OpenWrt 项目：
+
+<https://github.com/immortalwrt/immortalwrt>
+
+P3TERX 大佬的 Actions-OpenWrt 项目：
+
+<https://github.com/P3TERX/Actions-OpenWrt>
