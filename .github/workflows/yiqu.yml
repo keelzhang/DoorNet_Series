@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Doornet1 stable FusionWRT
+name: Doornet1_bate
 
 on:
   repository_dispatch:
