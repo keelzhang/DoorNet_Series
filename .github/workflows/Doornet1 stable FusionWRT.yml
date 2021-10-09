@@ -17,7 +17,7 @@ on:
   #   types: started
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/LubanCat/DoorNet-OpenWrt
   REPO_BRANCH: master
   CONFIG_FILE: configs/doornet1/doornet1_s.config
   DIY_SH: scripts/lean.sh
