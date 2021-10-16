@@ -60,8 +60,8 @@ jobs:
         git config --global user.email "git@github.com"
         git config --global user.name "GitHub"
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        cd openwrt
-        wget -P target/linux/rockchip/patches-5.4/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch
+        # cd openwrt
+        # wget -P target/linux/rockchip/patches-5.4/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch
     - name: Cache
       uses: klever1988/cachewrtbuild@main
       with:
