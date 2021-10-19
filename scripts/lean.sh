@@ -75,12 +75,6 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/pa
 
 # Add luci-app-smartdns & smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns
-# svn co https://github.com/281677160/openwrt-package/trunk/feeds/packages/net/smartdns
-# svn co https://github.com/OpenWrt-Actions/OpenWrt-Packages/trunk/smartdns
-# svn co https://github.com/OpenWrt-Actions/OpenWrt-Packages/trunk/luci-app-smartdns
-svn co https://github.com/openwrt/packages/trunk/net/smartdns
-sed -i 's/PKG_MIRROR_HASH:=.*//g' smartdns/Makefile
-# svn co https://github.com/openwrt/luci/trunk/applications/luci-app-smartdns
 
 # Add apk (Apk Packages Manager)
 svn co https://github.com/openwrt/packages/trunk/utils/apk
