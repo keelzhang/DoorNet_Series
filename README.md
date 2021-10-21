@@ -10,9 +10,6 @@
 - 电报群：https://t.me/DHDAXCW
 - X86固件 ：[点击链接下载](https://github.com/DHDAXCW/lede/releases)
 
-# 赏个鸡腿吧
- ![Alt text](data/2.jpg?raw=true "Title")
-### 如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
 # 插件展示
  ![Alt text](data/20.jpg?raw=true "Title")
 ## 提示
