@@ -62,7 +62,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         
     - name: cache
-      uses: DHDAXCW/cachewrtbuild@test
+      uses: HiGarfield/cachewrtbuild@test
       with:
         ccache: 'true'
         mixkey: ${{ env.TARGET_DEVICE_ARCH }}
