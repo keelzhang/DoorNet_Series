@@ -30,7 +30,7 @@ env:
 
 jobs:
   Build:
-    runs-on: self-hosted
+    runs-on: ubuntu-20.04
     if: github.repository == 'DHDAXCW/DoorNet_Series'
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
