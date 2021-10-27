@@ -62,8 +62,8 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         # wget -P target/linux/rockchip/patches-5.4/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch
-        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin /home/d/lede/target/linux/rockchip/armv8/base-files/usr/bin   
-        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  /home/d/lede/target/linux/rockchip/armv8/base-files/etc/rc.d
+        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
+        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
     - name: Cache
       uses: klever1988/cachewrtbuild@main
       with:
