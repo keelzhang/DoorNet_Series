@@ -12,7 +12,7 @@
 - big东东淘宝：[点击进入](https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21156935592.48.8d0644b9IwVcxe&id=658319471450)
 - 壹阿壹阿壹淘宝：[点击进入](https://item.taobao.com/item.htm?spm=a230r.1.14.29.5ca623e6hQpOkd&id=655585180511&ns=1&abbucket=11#detail)
 - The Mentality淘宝：[点击进入](https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-23932041130.72.264b5a8buuD1Uo&id=658729815469)
-- 风扇链接 [点击进入](https://s.click.taobao.com/67X4ceu)
+- 风扇链接 [点击进入](https://s.click.taobao.com/t?e=m%3D2%26s%3DgRTBGDB0YZwcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMQ8HNhhJnpl6RitN3%2FurF3yT0mcOGN1M6FAj1gqltKaEfKzCcEr0EW0YuhTK3FPxiHMT7yc3NZrQKSOkJV8harV3phaPbavinqGCwVfdcN0wcSpj5qSCmbA%3D)
 # 插件展示
  ![Alt text](data/20.jpg?raw=true "Title")
 ## 提示
