@@ -63,6 +63,8 @@ jobs:
         cd openwrt
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
+        rm -rf package/kernel/rtl8821cu
+        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
         rm -rf package/network/services/hostapd
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/network/services/hostapd package/network/services/hostapd
     - name: Update Feeds
