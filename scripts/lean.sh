@@ -71,7 +71,6 @@ git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add extra wireless drivers
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8188eu
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8192eu
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
@@ -166,6 +165,12 @@ sed -i "s/OpenWrt /DHDAXCW $(TZ=UTC-8 date "+%Y%m%d") @ FusionWrt /g" package/le
 # find package/*/ feeds/*/ -maxdepth 6 -path "*luci-app-smartdns/luasrc/controller/smartdns.lua" | xargs -i sed -i 's/\"SmartDNS\")\, 4/\"SmartDNS\")\, 3/g' {} 
 # Test kernel 5.10
 # sed -i 's/5.4/5.10/g' target/linux/rockchip/Makefile
+
+# Add rtl8812cu
+pushd package/kernel
+rm -rf rtl8821cu
+cp -f $GITHUB_WORKSPACE/scripts/rtl8821cu rtl8821cu
+popd
 
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
