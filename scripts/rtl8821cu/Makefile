@@ -51,7 +51,7 @@ NOSTDINC_FLAGS = \
 	-include backport/autoconf.h \
 	-include backport/backport.h
 
-EXTRA_KCONFIG:=\
+EXTRA_KCONFIG:= \
 	CONFIG_RTL8821CU=m \
 	USER_MODULE_NAME=rtl8821cu
 
@@ -65,7 +65,7 @@ EXTRA_CFLAGS:= \
 	-DCONFIG_RADIO_WORK \
 	-DCONFIG_IOCTL_CFG80211 \
 	-DCONFIG_CONCURRENT_MODE \
-	-DBUILD_OPENWRT \
+	-DBUILD_OPENWRT
 
 ifeq ($(ARCH),arm)
 	EXTRA_CFLAGS += -mfloat-abi=softfp
