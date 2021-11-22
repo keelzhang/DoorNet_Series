@@ -123,6 +123,8 @@ rm -rf libssh
 svn co https://github.com/openwrt/packages/trunk/libs/libssh
 popd
 
+#Add wifi
+svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
 rm -rf https-dns-proxy
