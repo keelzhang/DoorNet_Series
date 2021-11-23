@@ -123,8 +123,6 @@ rm -rf libssh
 svn co https://github.com/openwrt/packages/trunk/libs/libssh
 popd
 
-#Add wifi
-# svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
 rm -rf https-dns-proxy
@@ -163,10 +161,10 @@ sed -i "s/OpenWrt /DHDAXCW $(TZ=UTC-8 date "+%Y%m%d") @ FusionWrt /g" package/le
 # sed -i 's/5.4/5.10/g' target/linux/rockchip/Makefile
 
 # Add rtl8812cu
-pushd package/kernel
-rm -rf rtl8821cu
-svn co https://github.com/DHDAXCW/rtl88xx/trunk/rtl8821cu
-popd
+#pushd package/kernel
+#rm -rf rtl8821cu
+#svn co https://github.com/DHDAXCW/rtl88xx/trunk/rtl8821cu
+#popd
 
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
