@@ -68,7 +68,8 @@ jobs:
         rm -rf package/network/services/hostapd
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/network/services/hostapd package/network/services/hostapd
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi
-
+        rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
+        svn co https://github.com/DHDAXCW/lede/trunk/package/kernel/mac80211/files/lib/wifi/mac80211.sh
     - name: Update Feeds
       id: update
       run: |
