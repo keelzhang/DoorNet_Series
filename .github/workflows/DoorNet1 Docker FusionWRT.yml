@@ -68,6 +68,7 @@ jobs:
         # svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
         rm -rf package/network/services/hostapd
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/network/services/hostapd package/network/services/hostapd
+        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi
 
     - name: Cache
       uses: klever1988/cachewrtbuild@main
