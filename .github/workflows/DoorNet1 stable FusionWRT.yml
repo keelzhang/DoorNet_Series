@@ -63,10 +63,6 @@ jobs:
         cd openwrt
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
-        rm -rf package/network/services/hostapd
-        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/network/services/hostapd package/network/services/hostapd
-        wget -P target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/master/target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi
-        
     - name: Update Feeds
       id: update
       run: |
