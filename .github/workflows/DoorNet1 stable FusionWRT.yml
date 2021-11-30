@@ -69,6 +69,9 @@ jobs:
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/network/services/hostapd package/network/services/hostapd
         rm -rf package/kernel/mac80211
         svn co https://github.com/openwrt/openwrt/trunk/package/kernel/mac80211 package/kernel/mac80211
+        rm -rf package/firmware/ath10k-ct-firmware
+        rm -rf package/firmware/ath11k-firmware
+        svn co https://github.com/openwrt/openwrt/trunk/package/firmware/ath10k-ct-firmware package/firmware/ath10k-ct-firmware
     - name: Update Feeds
       id: update
       run: |
