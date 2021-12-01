@@ -64,11 +64,10 @@ jobs:
         # wget -P target/linux/rockchip/patches-5.4/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
-        # rm -rf package/kernel/rtl8821cu
-        # svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
+        rm -rf package/kernel/rtl8821cu
+        svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
         rm -rf package/network/services/hostapd
         svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/network/services/hostapd package/network/services/hostapd
-        wget -P target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/master/target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb/31-usb_wifi
 
     - name: Cache
       uses: klever1988/cachewrtbuild@main
