@@ -57,8 +57,8 @@ jobs:
     - name: Clone Source Code
       run: |
         df -hT $PWD
-        git config --global user.email "git@github.com"
-        git config --global user.name "GitHub"
+        git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git config --global user.name github-actions[bot]
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         # wget -P target/linux/rockchip/patches-5.4/ https://raw.githubusercontent.com/LubanCat/DoorNet-OpenWrt/DN1-DN2-Overclock/target/linux/rockchip/patches-5.4/807-arm64-dts-DoorNet1-add-dmc.patch
