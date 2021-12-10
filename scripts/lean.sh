@@ -186,8 +186,6 @@ rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
 wget -P package/kernel/mac80211/files/lib/netifd/wireless https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
 rm -rf package/network/services/hostapd/files/hostapd.sh
 wget -P package/network/services/hostapd/files https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/network/services/hostapd/files/hostapd.sh
-rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
-wget -P package/kernel/mac80211/files/lib/netifd/wireless https://github.com/DHDAXCW/RK356X/blob/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
 rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
 wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
