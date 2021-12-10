@@ -179,6 +179,18 @@ sed -i "s/OpenWrt /DHDAXCW $(TZ=UTC-8 date "+%Y%m%d") @ FusionWrt /g" package/le
 # rm -rf rtl8821cu
 # popd
 
+# 修复无线mac问题
+svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
+svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
+rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+wget -P package/kernel/mac80211/files/lib/netifd/wireless https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+rm -rf package/network/services/hostapd/files/hostapd.sh
+wget -P package/network/services/hostapd/files https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/network/services/hostapd/files/hostapd.sh
+rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+wget -P package/kernel/mac80211/files/lib/netifd/wireless https://github.com/DHDAXCW/RK356X/blob/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
+wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
 git am $GITHUB_WORKSPACE/patches/*.patch
