@@ -23,7 +23,7 @@
 ### https://afdian.net/@dhdaxcw/plan
 ## 鸣谢
 
-特别感谢以下项目：
+特别感谢以下项目： 
 
 Openwrt 官方项目：
 
