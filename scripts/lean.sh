@@ -202,6 +202,10 @@ wget -P package/network/services/hostapd/files https://raw.githubusercontent.com
 rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
 wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
+# bate mac
+pushd target/linux/rockchip/patches-5.4
+wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
+popd
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
 git am $GITHUB_WORKSPACE/patches/*.patch
