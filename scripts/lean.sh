@@ -173,7 +173,7 @@ popd
 
 rm -rf ./package/kernel/linux/modules/video.mk
 wget -P package/kernel/linux/modules/ https://github.com/immortalwrt/immortalwrt/raw/master/package/kernel/linux/modules/video.mk
-wget -P target/linux/rockchip/patches-5.4 https://raw.githubusercontent.com/DHDAXCW/package_target/master/107-Add-support-for-off-on-delay-kernel-5.4.patch
+
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
@@ -181,14 +181,9 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='FusionWrt'' package/lean/default-settings/files/zzz-default-settings
 sed -i "s/OpenWrt /DHDAXCW $(TZ=UTC-8 date "+%Y%m%d") @ FusionWrt /g" package/lean/default-settings/files/zzz-default-settings
-# find package/*/ feeds/*/ -maxdepth 6 -path "*luci-app-smartdns/luasrc/controller/smartdns.lua" | xargs -i sed -i 's/\"SmartDNS\")\, 4/\"SmartDNS\")\, 3/g' {} 
+
 # Test kernel 5.10
 # sed -i 's/5.4/5.10/g' target/linux/rockchip/Makefile
-
-# Add rtl8812cu
-# pushd package/kernel
-# rm -rf rtl8821cu
-# popd
 
 # 修复无线mac问题
 rm -rf package/kernel/rtl8821cu
@@ -202,10 +197,11 @@ wget -P package/network/services/hostapd/files https://raw.githubusercontent.com
 rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
 wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-# bate mac
+# 为doornet1支持多个以太网芯片
 pushd target/linux/rockchip/patches-5.4
 wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
 popd
+
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
 git am $GITHUB_WORKSPACE/patches/*.patch
@@ -214,7 +210,3 @@ echo 'net.bridge.bridge-nf-call-iptables=0' >> package/base-files/files/etc/sysc
 echo 'net.bridge.bridge-nf-call-ip6tables=0' >> package/base-files/files/etc/sysctl.conf
 echo 'net.bridge.bridge-nf-call-arptables=0' >> package/base-files/files/etc/sysctl.conf
 echo 'net.bridge.bridge-nf-filter-vlan-tagged=0' >> package/base-files/files/etc/sysctl.conf
-# Add CUPInfo
-# pushd package/lean/autocore/files/arm/sbin
-# cp -f $GITHUB_WORKSPACE/scripts/cpuinfo cpuinfo
-# popd
