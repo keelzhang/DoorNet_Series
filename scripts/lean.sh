@@ -201,7 +201,7 @@ wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com
 
 # Add doornet1s emmc
 cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/993-add-emmc.patch target/linux/rockchip/patches-5.4/993-add-emmc.patch
-cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/203-add-u-boot-emmc.patch package/boot/uboot-rockchip/203-add-u-boot-emmc.patch
+cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/203-add-u-boot-emmc.patch package/boot/uboot-rockchip/patches/203-add-u-boot-emmc.patch
 
 # Add doornet1 Support multiple network cards
 pushd target/linux/rockchip/patches-5.4
