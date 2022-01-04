@@ -1,0 +1,25 @@
+--- a/arch/arm64/boot/dts/rockchip/rk3328-doornet1.dts
++++ b/arch/arm64/boot/dts/rockchip/rk3328-doornet1.dts
+@@ -427,6 +427,20 @@
+ 	status = "okay";
+ };
+ 
++&emmc {
++	bus-width = <8>;
++	cap-mmc-highspeed;
++	max-frequency = <150000000>;
++	mmc-ddr-1_8v;
++	mmc-hs200-1_8v;
++	non-removable;
++	pinctrl-names = "default";
++	pinctrl-0 = <&emmc_clk &emmc_cmd &emmc_bus8>;
++	vmmc-supply = <&vcc_io_33>;
++	vqmmc-supply = <&vcc18_emmc>;
++	status = "okay";
++};
++
+ &sdmmc {
+ 	bus-width = <4>;
+ 	cap-sd-highspeed;
+-- 
+2.25.1
