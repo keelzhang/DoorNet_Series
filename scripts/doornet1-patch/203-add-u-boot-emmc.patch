@@ -38,3 +38,19 @@
  static struct mm_region rk3328_mem_map[] = {
 -- 
 2.25.1
+--- a/arch/arm/dts/rk3328-u-boot.dtsi
++++ b/arch/arm/dts/rk3328-u-boot.dtsi
+@@ -5,9 +5,8 @@
+ 
+ / {
+ 	aliases {
+-		mmc0 = &emmc;
+-		mmc1 = &sdmmc;
+-		spi0 = &spi0;
++		mmc0 = &sdmmc;
++		mmc1 = &emmc;
+ 	};
+ 
+ 	chosen {
+-- 
+2.25.1
