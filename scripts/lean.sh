@@ -188,16 +188,16 @@ sed -i "s/OpenWrt /DHDAXCW @ FusionWrt /g" package/lean/default-settings/files/z
 # sed -i 's/5.4/5.10/g' target/linux/rockchip/Makefile
 
 # 修复无线mac问题
-#rm -rf package/kernel/rtl8821cu
-#svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
-#svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
-#svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
-#rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
-#wget -P package/kernel/mac80211/files/lib/netifd/wireless https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
-#rm -rf package/network/services/hostapd/files/hostapd.sh
-#wget -P package/network/services/hostapd/files https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/network/services/hostapd/files/hostapd.sh
-#rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
-#wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+rm -rf package/kernel/rtl8821cu
+svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
+svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
+svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
+rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+wget -P package/kernel/mac80211/files/lib/netifd/wireless https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+rm -rf package/network/services/hostapd/files/hostapd.sh
+wget -P package/network/services/hostapd/files https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/network/services/hostapd/files/hostapd.sh
+rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
+wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # Add doornet1s emmc
 cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/993-add-emmc.patch target/linux/rockchip/patches-5.4/993-add-emmc.patch
