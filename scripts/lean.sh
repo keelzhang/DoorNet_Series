@@ -208,6 +208,7 @@ pushd target/linux/rockchip/patches-5.4
 wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
 popd 
 pushd target/linux/rockchip/armv8/base-files/etc/board.d
+rm -rf 02_network
 wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 popd
 
