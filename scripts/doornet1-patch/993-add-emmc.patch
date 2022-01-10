@@ -23,9 +23,3 @@
  	cap-sd-highspeed;
 -- 
 2.25.1
---- a/arch/arm64/boot/dts/rockchip/rk3328-doornet1.dts
-+++ b/arch/arm64/boot/dts/rockchip/rk3328-doornet1.dts
-@@ -115,12 +115,7 @@
- 			opp-microvolt-L0 = <1100000>;
- 			opp-microvolt-L1 = <1075000>;
- 		};
