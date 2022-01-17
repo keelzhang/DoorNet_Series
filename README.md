@@ -13,6 +13,9 @@
 - 壹阿壹阿壹淘宝：[点击进入](https://item.taobao.com/item.htm?spm=a230r.1.14.29.5ca623e6hQpOkd&id=655585180511&ns=1&abbucket=11#detail)
 - The Mentality淘宝：[点击进入](https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-23932041130.72.264b5a8buuD1Uo&id=658729815469)
 - 风扇链接 [点击进入](https://s.click.taobao.com/t?e=m%3D2%26s%3Dd8Ack0Lbx8McQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMXpyNmcFd6mT8sviUM61dt2T0mcOGN1M6FAj1gqltKaEfKzCcEr0EW0YuhTK3FPxiHMT7yc3NZrQKSOkJV8harV3phaPbavinqGCwVfdcN0wcSpj5qSCmbA%3D)
+# WiFi开启方法
+![image](https://user-images.githubusercontent.com/74764072/149740728-9c8145bb-6fed-4c5e-98d3-83011d2ab1a6.png)
+- 然后重启即可。有问题请提问
 # 插件展示
  ![Alt text](data/20.jpg?raw=true "Title")
 ## 提示
