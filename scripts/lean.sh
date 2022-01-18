@@ -44,9 +44,6 @@ git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 # Add luci-app-bypass
 # git clone https://github.com/garypang13/luci-app-bypass.git
 
-# Add OpenClash
-git clone https://github.com/DHDAXCW/OpenClash
-
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
@@ -88,6 +85,10 @@ cp -f $GITHUB_WORKSPACE/data/bg1.jpg luci-theme-argon/htdocs/luci-static/argon/i
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
+
+# Add OpenClash
+# git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+git clone https://github.com/DHDAXCW/OpenClash
 
 # Add luci-app-smartdns & smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns
