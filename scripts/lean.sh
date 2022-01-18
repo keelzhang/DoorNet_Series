@@ -87,8 +87,8 @@ cp -f $GITHUB_WORKSPACE/data/bg1.jpg luci-theme-argon/htdocs/luci-static/argon/i
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add OpenClash
-# git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-git clone https://github.com/DHDAXCW/OpenClash
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+# git clone https://github.com/DHDAXCW/OpenClash
 
 # Add luci-app-smartdns & smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns
