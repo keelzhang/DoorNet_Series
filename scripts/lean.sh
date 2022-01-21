@@ -18,7 +18,7 @@ rm -rf openwrt-package/luci-app-verysync
 
 # Add luci-app-netdata
 rm -rf ../lean/luci-app-netdata
-git clone https://github.com/sirpdboy/luci-app-netdata
+git clone depth=1 https://github.com/sirpdboy/luci-app-netdata
 
 # Add luci-app-ssr-plus
 git clone --depth=1 https://github.com/fw876/helloworld.git
@@ -42,7 +42,7 @@ git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add luci-app-bypass
-# git clone https://github.com/garypang13/luci-app-bypass.git
+# git clone --depth=1 https://github.com/garypang13/luci-app-bypass.git
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
@@ -68,7 +68,7 @@ svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease
 # cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-app-ikoolproxy (godproxy)
-git clone https://github.com/iwrt/luci-app-ikoolproxy.git
+git clone --depth=1 https://github.com/iwrt/luci-app-ikoolproxy.git
 
 # Add luci-app-dockerman
 rm -rf ../lean/luci-app-docker
@@ -113,7 +113,7 @@ svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
 svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
 
 # Add luci-app-poweroff
-git clone https://github.com/esirplayground/luci-app-poweroff
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
@@ -151,7 +151,7 @@ popd
 # Fix libssh
 pushd feeds/packages/libs
 rm -rf libssh
-svn co https://github.com/openwrt/packages/trunk/libs/libssh
+svn co --depthttps://github.com/openwrt/packages/trunk/libs/libssh
 popd
 
 # Use Lienol's https-dns-proxy package
@@ -172,7 +172,7 @@ sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\
 popd
 
 # Add po2lmo
-git clone https://github.com/openwrt-dev/po2lmo.git
+git clone --depth=1 https://github.com/openwrt-dev/po2lmo.git
 pushd po2lmo
 make && sudo make install
 popd
