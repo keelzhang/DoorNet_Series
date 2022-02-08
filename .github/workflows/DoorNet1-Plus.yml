@@ -1,12 +1,4 @@
-#=================================================
-# https://github.com/P3TERX/Actions-OpenWrt
-# Description: Build OpenWrt using GitHub Actions
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=================================================
-
-name: DoorNet1 formal edition FusionWRT
+name: DoorNet1-Plus
 
 on:
   repository_dispatch:
@@ -253,7 +245,7 @@ jobs:
         id: tag
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean8"
+          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean1"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
           touch release.txt
           [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
@@ -265,7 +257,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} DoorNet1 formal edition__全插件
+          name: ${{ steps.tag.outputs.release_date }} DoorNet1 Plus_全插件
           tag_name: ${{ steps.tag.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
