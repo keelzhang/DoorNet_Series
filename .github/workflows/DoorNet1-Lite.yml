@@ -1,12 +1,4 @@
-#=================================================
-# https://github.com/P3TERX/Actions-OpenWrt
-# Description: Build OpenWrt using GitHub Actions
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=================================================
-
-name: DoorNet1 stable FusionWRT
+name: DoorNet1-Lite
 
 on:
   repository_dispatch:
@@ -256,7 +248,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} doornet1 stable_稳定版
+          name: ${{ steps.tag.outputs.release_date }} doornet1 Lite_稳定版
           tag_name: ${{ steps.tag.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
