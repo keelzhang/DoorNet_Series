@@ -217,10 +217,10 @@ wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockch
 popd
 
 # upgrade the kernel
-pushd include
-rm -rf kernel-5.4
-wget https://raw.githubusercontent.com/DHDAXCW/lede/master/include/kernel-5.4
-popd
+#pushd include
+#rm -rf kernel-5.4
+#wget https://raw.githubusercontent.com/DHDAXCW/lede/master/include/kernel-5.4
+#popd
 
 # Custom configs
 # git am $GITHUB_WORKSPACE/patches/lean/*.patch
