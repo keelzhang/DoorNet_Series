@@ -219,7 +219,7 @@ popd
 # upgrade the kernel
 pushd include
 rm -rf kernel-5.4
-https://raw.githubusercontent.com/DHDAXCW/lede/master/include/kernel-5.4
+wget https://raw.githubusercontent.com/DHDAXCW/lede/master/include/kernel-5.4
 popd
 
 # Custom configs
