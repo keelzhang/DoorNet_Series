@@ -13,6 +13,7 @@ pushd package/community
 
 # Add Lienol's Packages
 git clone --depth=1 https://github.com/Lienol/openwrt-package
+rm -rf ../../customfeeds/luci/applications/luci-app-kodexplorer
 rm -rf openwrt-package/verysync
 rm -rf openwrt-package/luci-app-verysync
 
@@ -24,7 +25,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata
 git clone --depth=1 https://github.com/fw876/helloworld.git
 
 # Add luci-app-unblockneteasemusic
-rm -rf ../../feeds/luci/applications/luci-app-unblockmusic
+rm -rf ../../customfeeds/luci/applications/luci-app-unblockmusic
 git clone --depth=1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
 
 # Add luci-app-passwall
@@ -71,15 +72,16 @@ svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease
 git clone --depth=1 https://github.com/iwrt/luci-app-ikoolproxy.git
 
 # Add luci-app-dockerman
-rm -rf ../../feeds/luci/collections/luci-lib-docker
-rm -rf ../../feeds/luci/applications/luci-app-dockerman
+rm -rf ../../customfeeds/luci/collections/luci-lib-docker
+rm -rf ../../customfeeds/luci/applications/luci-app-docker
+rm -rf ../../customfeeds/luci/applications/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
-rm -rf ../../feeds/luci/themes/luci-theme-argon
+rm -rf ../../customfeeds/luci/themes/luci-theme-argon
 rm -rf ./luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 cp -f $GITHUB_WORKSPACE/data/bg1.jpg luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
@@ -101,7 +103,8 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/pa
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
 
 # Add luci-aliyundrive-webdav
-rm -rf ../../feeds/luci/collections/luci-app-aliyundrive-webdav aliyundrive-webdav
+rm -rf ../../customfeeds/luci/applications/luci-app-aliyundrive-webdav 
+rm -rf ../../customfeeds/luci/applications/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
 
@@ -118,15 +121,14 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
-popd
 
 # Add cpufreq
-rm -rf feeds/luci/collections/luci-app-cpufreq
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
-ln -sf ./feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
-sed -i 's,1608,1800,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
-sed -i 's,2016,2208,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
-sed -i 's,1512,1608,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+rm -rf ../../customfeeds/luci/applications/luci-app-cpufreq
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq
+sed -i 's,1608,1800,g' luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,2016,2208,g' luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,1512,1608,g' luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+popd
 
 # 动态DNS
 git clone --depth 1 https://github.com/small-5/ddns-scripts-dnspod package/lean/ddns-scripts_dnspod
