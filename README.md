@@ -16,7 +16,7 @@
 # WiFi开启方法
 ![image](https://user-images.githubusercontent.com/74764072/149740728-9c8145bb-6fed-4c5e-98d3-83011d2ab1a6.png)
 - 然后重启即可。有问题请提问
-# 插件展示
+# 插件展示 
  ![Alt text](data/20.jpg?raw=true "Title")
 ## 提示
  - 我的固件加了动态超频，不管热不热这是取决后台运行程序在跑什么。
