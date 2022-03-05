@@ -7,6 +7,14 @@ svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds
 rm -rf ./feeds/packages/admin/netdata
 svn co https://github.com/DHDAXCW/packages/branches/ok/admin/netdata ./feeds/packages/admin/netdata
 
+# Add cpufreq
+rm -rf ./feeds/luci/applications/luci-app-cpufreq 
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
+ln -sf ./feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
+sed -i 's,1608,1800,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,2016,2208,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,1512,1608,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
@@ -121,14 +129,6 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
-
-# Add cpufreq
-rm -rf ./../../feeds/luci/applications/luci-app-cpufreq
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
-ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
-sed -i 's,1608,1800,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
-sed -i 's,2016,2208,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
-sed -i 's,1512,1608,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
 popd
 
 # 动态DNS
@@ -208,8 +208,8 @@ rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
 wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # Add doornet1s emmc
-cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/993-add-emmc.patch target/linux/rockchip/patches-5.4/993-add-emmc.patch
-cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/203-add-u-boot-emmc.patch package/boot/uboot-rockchip/patches/203-add-u-boot-emmc.patch
+# cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/993-add-emmc.patch target/linux/rockchip/patches-5.4/993-add-emmc.patch
+# cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/203-add-u-boot-emmc.patch package/boot/uboot-rockchip/patches/203-add-u-boot-emmc.patch
 
 # Add doornet1 Support multiple network cards
 pushd target/linux/rockchip/patches-5.4
