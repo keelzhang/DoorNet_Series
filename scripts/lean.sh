@@ -6,7 +6,7 @@ svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds
 # fix netdata
 rm -rf ./feeds/packages/admin/netdata
 svn co https://github.com/DHDAXCW/packages/branches/ok/admin/netdata ./feeds/packages/admin/netdata
-
+rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d
 # Add cpufreq
 rm -rf ./feeds/luci/applications/luci-app-cpufreq 
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
@@ -196,25 +196,25 @@ sed -i "s/OpenWrt /DHDAXCW @ FusionWrt /g" package/lean/default-settings/files/z
 sed -i 's/5.15/5.10/g' target/linux/rockchip/Makefile
 
 # 修复无线mac问题
-rm -rf package/kernel/rtl8821cu
-svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
-svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
-svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
-rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
-wget -P package/kernel/mac80211/files/lib/netifd/wireless https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
-rm -rf package/network/services/hostapd/files/hostapd.sh
-wget -P package/network/services/hostapd/files https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/network/services/hostapd/files/hostapd.sh
-rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
-wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+# rm -rf package/kernel/rtl8821cu
+# svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
+# svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/usr/bin target/linux/rockchip/armv8/base-files/usr/bin   
+# svn co https://github.com/LubanCat/DoorNet-OpenWrt/trunk/target/linux/rockchip/armv8/base-files/etc/rc.d  target/linux/rockchip/armv8/base-files/etc/rc.d
+# rm -rf package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+# wget -P package/kernel/mac80211/files/lib/netifd/wireless https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
+# rm -rf package/network/services/hostapd/files/hostapd.sh
+# wget -P package/network/services/hostapd/files https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/network/services/hostapd/files/hostapd.sh
+# rm -rf package/kernel/mac80211/files/lib/wifi/mac80211.sh
+# wget -P package/kernel/mac80211/files/lib/wifi https://raw.githubusercontent.com/DHDAXCW/RK356X/main/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # Add doornet1s emmc
 # cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/993-add-emmc.patch target/linux/rockchip/patches-5.4/993-add-emmc.patch
 # cp -f $GITHUB_WORKSPACE/scripts/doornet1-patch/203-add-u-boot-emmc.patch package/boot/uboot-rockchip/patches/203-add-u-boot-emmc.patch
 
 # Add doornet1 Support multiple network cards
-pushd target/linux/rockchip/patches-5.4
-wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
-popd
+# pushd target/linux/rockchip/patches-5.4
+# wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
+# popd
 pushd target/linux/rockchip/armv8/base-files/etc/board.d
 rm -rf 02_network
 wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
