@@ -100,7 +100,7 @@ git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 # git clone https://github.com/DHDAXCW/OpenClash
 
 # Add luci-app-smartdns & smartdns
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns
+svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns
 
 # Add extra wireless drivers
 # svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
@@ -192,7 +192,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='FusionWrt'' pac
 sed -i "s/OpenWrt /DHDAXCW @ FusionWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Test kernel 5.10
-sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
+# sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
 
 # 修复无线mac问题
 # rm -rf package/kernel/rtl8821cu
