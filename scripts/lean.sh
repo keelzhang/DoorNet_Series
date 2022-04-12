@@ -184,9 +184,6 @@ pushd po2lmo
 make && sudo make install
 popd
 
-rm -rf ./package/kernel/linux/modules/video.mk
-wget -P package/kernel/linux/modules/ https://github.com/immortalwrt/immortalwrt/raw/master/package/kernel/linux/modules/video.mk
-
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
@@ -196,7 +193,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='FusionWrt'' pac
 sed -i "s/OpenWrt /DHDAXCW @ FusionWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Test kernel 5.10
-# sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
+sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
 
 # 修复无线mac问题
 # rm -rf package/kernel/rtl8821cu
