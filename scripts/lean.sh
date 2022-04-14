@@ -46,10 +46,6 @@ git clone --depth=1 https://github.com/UnblockNeteaseMusic/luci-app-unblocknetea
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
-# Add mentohust & luci-app-mentohust
-git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
-git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
-
 # Add luci-proto-minieap
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
@@ -167,12 +163,6 @@ rm -rf https-dns-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 popd
 
-# Use snapshots syncthing package
-pushd feeds/packages/utils
-rm -rf syncthing
-svn co https://github.com/openwrt/packages/trunk/utils/syncthing
-popd
-
 # Fix mt76 wireless driver
 pushd package/kernel/mt76
 sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
@@ -215,10 +205,6 @@ sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
 # pushd target/linux/rockchip/patches-5.4
 # wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
 # popd
-pushd target/linux/rockchip/armv8/base-files/etc/board.d
-rm -rf 02_network
-wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-popd
 
 # upgrade the kernel
 # Custom configs
