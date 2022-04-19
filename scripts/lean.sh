@@ -9,7 +9,7 @@ git clone --depth=1 https://github.com/MilesPoupart/openwrt-passwall ./package/l
 # fix netdata
 rm -rf ./feeds/packages/admin/netdata
 svn co https://github.com/DHDAXCW/packages/branches/ok/admin/netdata ./feeds/packages/admin/netdata
-rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d
+rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb
 # Add cpufreq
 rm -rf ./feeds/luci/applications/luci-app-cpufreq 
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
