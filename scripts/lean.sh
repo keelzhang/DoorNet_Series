@@ -6,11 +6,6 @@ svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/MilesPoupart/openwrt-passwall ./package/lean/openwrt-passwall
 
-# Addd mosdns
-svn export https://github.com/QiuSimons/openwrt-mos/trunk/mosdns package/lean/mosdns
-svn export https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns package/lean/luci-app-mosdns
-svn export https://github.com/QiuSimons/openwrt-mos/trunk/v2ray-geodata package/lean/v2ray-geodata
-
 # fix netdata
 rm -rf ./feeds/packages/admin/netdata
 svn co https://github.com/DHDAXCW/packages/branches/ok/admin/netdata ./feeds/packages/admin/netdata
@@ -37,7 +32,7 @@ rm -rf ../../feeds/luci/applications/luci-app-netdata
 git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata
 
 # Add luci-app-ssr-plus
-git clone --depth=1 https://github.com/DHDAXCW/helloworld
+git clone --depth=1 https://github.com/fw876/helloworld
 
 # Add luci-app-unblockneteasemusic
 rm -rf ../../customfeeds/luci/applications/luci-app-unblockmusic
@@ -213,5 +208,5 @@ sed -i "s/OpenWrt /DHDAXCW @ FusionWrt /g" package/lean/default-settings/files/z
 # upgrade the kernel
 # Custom configs
 # git am $GITHUB_WORKSPACE/patches/lean/*.patch
-git am $GITHUB_WORKSPACE/patches/*.patch
+# git am $GITHUB_WORKSPACE/patches/*.patch
 echo -e " DHDAXCW's FusionWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
