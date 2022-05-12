@@ -206,6 +206,9 @@ sed -i "s/OpenWrt /DHDAXCW @ FusionWrt /g" package/lean/default-settings/files/z
 # wget https://raw.githubusercontent.com/DHDAXCW/RK356X/master/target/linux/rockchip/patches-5.4/810-arm64-dts-DoorNet1-fix-gmac.patch.patch
 # popd
 
+# 删除定时coremark
+rm -rf ./customfeeds/packages/utils/coremark/coremark
+
 # upgrade the kernel
 # Custom configs
 # git am $GITHUB_WORKSPACE/patches/lean/*.patch
