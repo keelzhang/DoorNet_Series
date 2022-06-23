@@ -67,7 +67,7 @@ git clone --depth=1 https://github.com/NateLol/luci-app-oled
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-adguardhome
-svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
+svn co https://github.com/Boos4721/OpenWrt-Packages/trunk/luci-app-adguardhome
 
 # Add ddnsto & linkease
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
