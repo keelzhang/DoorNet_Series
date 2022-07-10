@@ -8,14 +8,19 @@
 
 name: DoorNet1-Plus
 
-on:
-  repository_dispatch:
-  workflow_dispatch:
-  #schedule:
-    #- cron: 0 17 * * *
-   watch:
-     types: started
+on: 
+  release:
+    types: [published]
 
+  push:
+    branches: 
+      - master
+
+  #schedule:
+  #  - cron: 0 8 * * 5
+  
+  watch:
+    types: [started]
 env:
   REPO_URL: https://github.com/DHDAXCW/op-rockchip
   REPO_BRANCH: stable
@@ -27,7 +32,7 @@ env:
 
 jobs:
   Build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     if: github.repository == 'keelzhang/DoorNet_Series'
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
